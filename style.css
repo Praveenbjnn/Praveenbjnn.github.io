@@ -1,0 +1,245 @@
+/* --- Reset & Base Styles --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    background-color: #fafafa;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 80px 0;
+}
+
+/* --- Header & Nav --- */
+header {
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    letter-spacing: -0.5px;
+}
+
+.logo span {
+    color: #2563eb; /* Tech Blue accent */
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #4b5563;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #2563eb;
+}
+
+/* --- Hero Section --- */
+.hero {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    color: #ffffff;
+    text-align: center;
+    padding-top: 160px;
+    padding-bottom: 120px;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    letter-spacing: -1px;
+}
+
+.hero-content p {
+    font-size: 1.25rem;
+    color: #cbd5e1;
+    max-width: 600px;
+    margin: 0 auto 40px auto;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #2563eb;
+    color: #ffffff;
+    padding: 12px 32px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn:hover {
+    background-color: #1d4ed8;
+}
+
+/* --- About Section --- */
+.about {
+    text-align: center;
+    background-color: #ffffff;
+}
+
+.about h2 {
+    font-size: 2.25rem;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.about p {
+    max-width: 750px;
+    margin: 0 auto;
+    font-size: 1.125rem;
+    color: #4b5563;
+}
+
+/* --- Services Section --- */
+.services {
+    background-color: #f1f5f9;
+}
+
+.services h2 {
+    font-size: 2.25rem;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.service-card {
+    background: #ffffff;
+    padding: 40px 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.service-card .icon {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.service-card h3 {
+    font-size: 1.35rem;
+    margin-bottom: 15px;
+    color: #1e293b;
+}
+
+.service-card p {
+    color: #64748b;
+    font-size: 0.975rem;
+}
+
+/* --- Contact Section --- */
+.contact {
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 2.25rem;
+    margin-bottom: 15px;
+}
+
+.contact p {
+    color: #4b5563;
+    margin-bottom: 40px;
+}
+
+.contact-details {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.contact-item {
+    font-size: 1.125rem;
+    color: #1e293b;
+}
+
+.contact-item a {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* --- Footer --- */
+footer {
+    background-color: #0f172a;
+    color: #94a3b8;
+    text-align: center;
+    padding: 30px 0;
+    font-size: 0.875rem;
+    border-top: 1px solid #334155;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    nav ul li {
+        margin: 0 15px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.25rem;
+    }
+
+    .container {
+        padding: 50px 0;
+    }
+
+    .contact-details {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
